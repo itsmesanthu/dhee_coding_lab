@@ -45,32 +45,20 @@ class Charger:
 
     def getCharger(self):
         print("Charger is used for charging")
-
-
 class Mobile:
     def __init__(self, name):
         self.mname = name
         self.c1 = None
         print("Mobile is ready")
-
     def hasmobile(self, c):
         self.c1 = c
         print("Both mobile and charger are connected")
-
-
-# object creation
 m = Mobile("iphone")
 charge = Charger("iphone charger")
-
-# connecting charger to mobile
 m.hasmobile(charge)
-
 print(m.mname)
 print(m.c1.cname)
-
-# using charger function
 m.c1.getCharger()
-
 del m
 print(charge.cname)
 charge.getCharger()
