@@ -74,7 +74,7 @@ else:
     print(f"{target} element not found ")
 print("====================================")'''
 
-'''def creatarray():
+def creatarray():
     print("enter the elements into the array to be created :")
     l1=[]
     while True:
@@ -97,7 +97,8 @@ if flag:
     print(f"the {target} element is found at index:{index}")
 else:
     print(f"{target} element not found ")
-print("================================")'''
+print("================================")
+'''
 
 def creatarray():
     print("enter the elements into the array to be created :")
@@ -121,4 +122,4 @@ def diffarray(arr):
     return diff
 arr=creatarray()
 d=diffarray(arr)
-print("array diff. is :",d)
+print("array diff. is :",d)'''
