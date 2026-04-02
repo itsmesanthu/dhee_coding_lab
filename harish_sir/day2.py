@@ -75,11 +75,11 @@ if h.isalpha():
 if h.isdigit():
     print(" string contain only num")
 if h.isalnum():
-    print("string contain both")'''
-#string formatting
-name=input(" enter the name : ")
-age=int(input("enter the age : "))
-adders=input("enter the student adders : ")
-quali=input("enter the qualification : ")
-print("the student name is : {} .\n student  age is :{} \n student adders is : {} \n student qualification : {}". format(name,age,adders,quali))
-print("the student name is : {3} .\n student  age is :{2} \n student adders is : {1} \n student qualification : {0}". format(name,age,adders,quali))
+    print("string contain both")
+# #string formatting
+# name=input(" enter the name : ")
+# age=int(input("enter the age : "))
+# adders=input("enter the student adders : ")
+# quali=input("enter the qualification : ")
+# print("the student name is : {} .\n student  age is :{} \n student adders is : {} \n student qualification : {}". format(name,age,adders,quali))
+# print("the student name is : {3} .\n student  age is :{2} \n student adders is : {1} \n student qualification : {0}". format(name,age,adders,quali))
