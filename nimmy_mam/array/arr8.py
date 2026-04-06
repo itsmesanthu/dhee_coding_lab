@@ -51,4 +51,3 @@ print("insert ")
 a.insert(0,b)
 print(a)
 print(b)
-
