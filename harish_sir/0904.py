@@ -34,5 +34,20 @@ print(b1)
 #print(s1)
 s2={10,20,(20,30),45}
 print(s2)
-s3={10,20,{30,40},50}
-print(s3)
+# s3={10,20,{30,40},50}
+# print(s3)
+#dictionary 
+emp={
+    "id":101,
+    "name":"santhu",
+    "age":21,
+    "addr":"beng"
+}
+print(emp)
+print(type(emp))
+print(emp["name"])
+print(emp["addr"])
+emp["mob"]=9632
+print(emp)
+del emp["mob"]
+print(emp)
