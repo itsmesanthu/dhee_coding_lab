@@ -1,4 +1,4 @@
-'''print(ord("A"))
+print(ord("A"))
 print(ord(" "))
 print(ord("8"))
 #print(ord(""))#error
@@ -30,7 +30,7 @@ for i in range(1,n+1):
             print(chr(64+j),end="")
         else:
             print(chr(96+j),end="")
-    print()'''
+    print()
 print("===============================")
 
 
