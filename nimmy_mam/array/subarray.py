@@ -25,15 +25,6 @@ def createarray():
             l.append(n)
         except Exception as e:
             return l
-'''def subarray(arr):
-    res=[]
-    for i in range(0,len(arr)):
-          for j in range(i,len(arr)):
-            sub=[]
-            for k in range(i,j+1):
-                sub.append(arr[k])
-            res.append(sub)
-    return res'''
 def subarray(arr):
     res=[]
     for i in range(0,len(arr)):
@@ -49,21 +40,15 @@ def subarray(arr):
 def maxSubArray(nums):
         cunsum=0
         maxsum=-2**31
-        sub=[]
         for i in range(0,len(nums)):
             cunsum+=nums[i]
-            h=nums[i]
             if cunsum>maxsum:
-                sub.append[h]
                 maxsum=cunsum
             if cunsum<0:
                 cunsum=0
-        print(sub)
         return maxsum
 
 arr=createarray()
 print("oiginal array: ",arr)
-# sub=subarray(arr)
-# print("the sub array is : ",sub)
 se= maxSubArray(arr)
 print(se)
