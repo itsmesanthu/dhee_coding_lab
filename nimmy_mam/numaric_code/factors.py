@@ -1,4 +1,4 @@
-'''def dispFactors(n):
+def dispFactors(n):
     print(f"The factors of {n} are: ", end="")
     for i in range(1, n + 1):
         if n % i == 0:
@@ -39,4 +39,4 @@ dispFactors(n)
 resFact, resCycles = countFactors(n)
 print(f"\nThe number of factors of {n} is: {resFact}")
 print("=================================")
-print(f"The number of cycles taken to count the factors is: {resCycles}")
+print(f"The number of cycles taken to count the factors is: {resCycles}")'''

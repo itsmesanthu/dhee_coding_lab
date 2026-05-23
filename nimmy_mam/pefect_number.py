@@ -1,18 +1,19 @@
-# 
-
-def auto(n):
-    s=n*n
-    temp=n
-    d=0
-    while n>0:
-        if n%10:
-            d+=1
-        n=n//10
-    l=s%(10**d)
-    return l==temp
-n=int(input("entre n umber:"))
-flag=auto(n)
+def perfect(n):
+    i = 1
+    total = 0
+    while i * i <= n:
+        if n % i == 0:
+            total += i
+            if i != (n // i):
+                total += (n // i)
+        i += 1
+    if total - n == n:
+        return True
+    return False
+n = int(input("Enter a number: "))
+flag = perfect(n)
 if flag:
-    print(f"the number {n} is automorphic number ")
+    print("This is a perfect number")
 else:
-     print(f"the number {n} is not a  automorphic number ")
+    print("This is not a perfect number")
+
