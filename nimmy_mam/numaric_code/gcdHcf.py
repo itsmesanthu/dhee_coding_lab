@@ -1,5 +1,5 @@
 #wap to display the hcf/gcd of the given 2 number.
-'''def findGCD(n1,n2):
+def findGCD(n1,n2):
     hcf=1 #
     lower =n1
     if n2<n1:
@@ -29,4 +29,4 @@ res=findGCD(n1,n2)
 if res==1:
     print("this is co prime")
 else:
-    print("this not co prime")
+    print("this not co prime")'''

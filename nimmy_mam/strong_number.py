@@ -8,6 +8,7 @@
 #             f*=i
 #         sum+=f
 #         n=n//10
+
 #     return temp==sum
 # n=int(input("entre number:"))
 # flag=strong(n)

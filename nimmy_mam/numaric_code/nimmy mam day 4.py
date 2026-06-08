@@ -1,4 +1,4 @@
-''''#incremnet for looping
+#incremnet for looping
 n=int(input("enter the number : "))
 m=int(input("enter the difference to increment :"))
 for i in range(2, (n+1), +m):
@@ -9,7 +9,7 @@ n=int(input("enter the number : "))
 m=int(input("enter the difference to decrement :"))
 for i in range(n, (1-1), -m):
     print(i,end=" ")
-print("\n last updated :"
+print("\n last updated :")
 #-WAL to print 1 to 8(n) with a incrementing difference starting form the 1
 n=int(input("enter the number"))
 i=1
@@ -40,4 +40,4 @@ while True:
     elif n==3 or n ==5:
         continue
     else:
-        print(f"the enter number is {n}")'''
+        print(f"the enter number is {n}")

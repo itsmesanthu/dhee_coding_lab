@@ -1,4 +1,4 @@
-'''def creatarray():
+def creatarray():
     print("Enter the elements into the array to be created:")
     l1 = []
     while True:
@@ -21,7 +21,7 @@ arr = creatarray()
 max1 = findMax(arr)
 print("The array is:", arr)
 print("Max element:", max1[0], "at index", max1[1])
-print("Second max:", max1[2], "at index", max1[3])'''
+print("Second max:", max1[2], "at index", max1[3])
 
 '''def creatarray():
     print("Enter the elements into the array to be created:")
@@ -46,7 +46,7 @@ arr = creatarray()
 min1 = findMin(arr)
 print("The array is:", arr)
 print("Min element:", min1[0], "at index", min1[1])
-print("Second min:", min1[2], "at index:", min1[3])'''
+print("Second min:", min1[2], "at index:", min1[3])
 def creatarray():
     print("Enter the elements into the array to be created:")
     l1 = []
@@ -65,4 +65,4 @@ def bubble_sort(arr):
     return arr
 arr=creatarray()
 res=bubble_sort(arr)
-print(res)
+print(res)'''
