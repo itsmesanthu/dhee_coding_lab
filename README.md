@@ -29,3 +29,15 @@ This repository may include:
 - Lists, Tuples, Sets, Dictionaries
 - File Handling
 - Object-Oriented Programming
+
+### Data Structures & Algorithms
+- Arrays
+- Strings
+- Searching
+- Sorting
+- Recursion
+- Problem Solving
+
+## 💡 Note
+
+This repository is intended for learning and practice purposes only. Code quality, structure, and solutions may improve over time as I continue learning and gaining experience.
