@@ -1,40 +1,31 @@
-# Dhee Coding Lab Internship
+# 📚 Learning & Practice Repository
 
-This repository contains the work completed during my internship at **Dhee Coding Lab**. The internship focused on improving programming skills, problem-solving ability, and understanding of core computer science concepts.
+Welcome to my Learning & Practice Repository!
 
-## Internship Overview
+This repository is created to document my learning journey in software development. Here, I regularly practice coding concepts, build small projects, solve problems, and explore new technologies.
 
-During this internship, I practiced and implemented various programming concepts including aptitude problem solving, Python programming, and basic Data Structures and Algorithms.
+## 🎯 Purpose
 
-## Topics Covered
+The main goal of this repository is to:
 
-* Aptitude (Profit & Loss, Ratio & Proportion)
-* Python Programming
-* Arrays
-* Data Structures
-* Graph Algorithms (DFS and BFS)
-* HTML and CSS basics
+- Learn new programming concepts
+- Practice coding regularly
+- Improve problem-solving skills
+- Build consistency in learning
+- Track my progress over time
+- Maintain notes and examples for future reference
 
-## Programs and Projects
+## 📖 What You'll Find Here
 
-* Python programs for basic problem solving
-* Array-based programs
-* Implementation of DFS and BFS algorithms
-* Basic web design using HTML and CSS
-* Practice problems related to aptitude
+This repository may include:
 
-## Skills Gained
-
-* Problem solving and logical thinking
-* Python programming fundamentals
-* Understanding of graph traversal algorithms
-* Basic front-end development
-* GitHub project management
-
-## Repository Purpose
-
-This repository is created to store and showcase the programs, exercises, and mini-projects completed during the internship at Dhee Coding Lab.
-
----
-
-⭐ This internship helped me strengthen my programming foundation and practical coding skills.
+### Python
+- Variables and Data Types
+- Operators
+- Conditional Statements
+- Loops
+- Functions
+- Strings
+- Lists, Tuples, Sets, Dictionaries
+- File Handling
+- Object-Oriented Programming
