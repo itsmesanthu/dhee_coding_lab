@@ -46,6 +46,7 @@ while i < math.sqrt(n):
         print(n//i)
     i+=1
 print("count:",conut)
+
 b=13
 i = 2
 while i < math.sqrt(b):
@@ -54,8 +55,81 @@ while i < math.sqrt(b):
     else:
         print("p")
     i+=1
+
 a=int(input("enter the number: "))
 if(math.sqrt(a)*math.sqrt(a))==a:
     print("add")
 else:
     print("even")
+n=[1,2,3,4,5]
+res=[]
+for i in range(len(n)):
+    if(math.sqrt(n[i])*math.sqrt(n[i])==n[i]):
+        res.append("Open")
+    else:
+        res.append("close")
+print(res)
+nums=[2,3,5,4,5,2,4]
+n=0
+for i  in range(len(nums)):
+    n=n^nums[i]
+print(n)
+
+a=[1,2,13,4,5,6]
+k=4
+maxsum=0
+for i in range(0,len(a)-k+1):
+    sum=0
+    j=0
+    while j<k:
+        sum=sum+a[i+j]
+        j+=1
+    maxsum=max(maxsum,sum)
+print(maxsum)
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+arr=[1,2,13,4,5,6]
+res=bubble_sort(arr)
+print(res)
+
+def insertion(arr):
+    n=len(arr)
+    for i in range(0,(n-1)):
+        for j in range(i+1,0,-1):
+            if arr[i]>arr[j]:
+                arr[j-1],arr[j]=arr[j],arr[i]
+            else:
+                break
+arr=[1,2,13,4,5,6]
+res=insertion(arr)
+print(res)
+#sum of subarray
+
+# arr = [1, 2, 3]
+# sum=0
+# n=len(arr)
+# for i in range(n):
+#     l=i+1
+#     r=n-i
+#     sum+=(l*r*arr[i])
+# print(sum)
+
+
+# water
+ans=0
+i,j=0,len(arr)-1
+while i<j:
+    h=min(arr[i],arr[j])
+    w=j-i
+    ans=max(ans,h*w)
+    if arr[i]<arr[j]:
+        i+=1
+    else:
+        j-=1
+print(ans)

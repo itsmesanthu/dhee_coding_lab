@@ -6,8 +6,8 @@ def findGCD(n1,n2):
         lower=n2
     for i in range(2,lower+1):
         if n1%i==0 and n2%i==0:
-            hcf=i
-    return hcf
+            gcd=i
+    return gcd
 n1=int(input("enter the number"))
 n2=int(input("enter the number"))
 res=findGCD(n1,n2)
