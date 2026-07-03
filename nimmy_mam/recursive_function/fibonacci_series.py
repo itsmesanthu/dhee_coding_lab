@@ -14,10 +14,4 @@ def fibo(pos):
 pos=int(input("enter thee n th number : "))
 h=fibo(pos)
 print(f"the element present at pos :{pos} is : {h} ")
-n=8
-def num(n):
-    if n<=0:
-        return 1
-    return num(n-1)
-num(n)
-print(n)
+
