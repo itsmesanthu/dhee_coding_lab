@@ -23,4 +23,4 @@ stalls = [1, 2, 4, 8, 9]
 k = 3
 solver = Solution()
 res = solver.aggressiveCows(stalls, k)
-print(res) # Output: 3
+print(res) 
