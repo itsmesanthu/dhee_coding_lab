@@ -1,4 +1,4 @@
-arr=[10,7,6,5,20,-1,-2]
+arr=[]
 def bubbel_sort(arr):
     n=len(arr)
     for i in range(0,n):
