@@ -8,9 +8,12 @@ def part(arr,left,right):
             i+=1
             arr[i],arr[j]=arr[j],arr[i]
         j+=1
-    print(arr)
     return i
-res=part(arr,0,len(arr))
-print(res)
-part(arr,0,res-1)
-part(arr,res+1,len)
+def quicksort(arr,left,right):
+    if left<right:
+        x=part(arr,left,right)
+        quicksort(arr,left,x-1)
+        quicksort(arr,x+1,right)
+    return arr
+
+print(quicksort(arr,0,len(arr)))
