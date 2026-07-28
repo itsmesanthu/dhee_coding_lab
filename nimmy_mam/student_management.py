@@ -14,9 +14,10 @@ class studentManagement:
                         print("2.   view student")
                         print("3.   update student")
                         print("4.   delete student")
-                        print("5.   Search Student")
-                        print("6.   total student")
-                        print("7.   exit")
+                        print("5.   Search Student by id")
+                        print("6.   Search Student by name")
+                        print("7.   total student")
+                        print("8.   exit")
         
                         choice=int(input("enter you choice: "))
                         if choice==1:
@@ -28,11 +29,13 @@ class studentManagement:
                         elif choice==4:
                             self.delete_student()
                         elif choice==5:
-                            self.search_student()
+                            self.search_student_id()
                         elif choice==6:
-                            self.total_student()
+                            self.search_student()
                         elif choice==7:
-                            print("exited...")
+                            self.total_student()
+                        elif choice==8:
+                            print("exit ...!")
                             break
                         else:
                             print("invailed choice.")
@@ -48,12 +51,15 @@ class studentManagement:
                 return
         student["name"]=input("enter student name: ")
         while True:
-            age=int(input("enter the student age:"))
-            if age>=6 and age<=18:
-                student["age"]=age
-                break
-            else:
-                print("Invalid age. Please enter again.")
+           try:
+                age=int(input("enter the student age:"))
+                if age>=6 and age<=18:
+                        student["age"]=age
+                        break
+                else:
+                    print("age must be in between 6 to 18")
+            except ValueError:
+               print("Please enter a valid number.")
         while True:
             c=int(input("enter the class: "))
             if c>=1 and c<=10:
@@ -71,54 +77,62 @@ class studentManagement:
             print("no students founds")
             return
         print("==========student list=======")
-        print("_"*45)
+        print("-"*45)
         print(f"{'id':<8}{'name':<15}{'age':<8}{'class'}")
-        print("_"*45)
+        print("-"*45)
         for stu in self.students:
             print(f"{stu['id']:<8}{stu['name']:<15}{stu['age']:<8}{stu['class']}")
     def update_student(self):
         self.view_student()
         if len(self.students) == 0:
             return
-        index = int(input("Enter student number: ")) - 1
-        if 0 <= index < len(self.students):
-            new_id = int(input("Enter new ID: "))
-            for i, stu in enumerate(self.students):
-                if i != index and stu["id"] == new_id:
-                    print("ID already exists.")
-                    return
-            self.students[index]["id"] = new_id
-            self.students[index]["name"] = input("Enter new name: ")
-            while True:
-                age = int(input("Enter age: "))
-                if 6 <= age <= 18:
-                    self.students[index]["age"] = age
-                    break
-                print("Invalid age.")
-            while True:
-                c = int(input("Enter class: "))
-                if 1 <= c <= 10:
-                    self.students[index]["class"] = c
-                    break
-                print("Invalid class.")
-            self.save_data()
+        try:
+            id=int(input("enter the student id: "))
+        except ValueError:
+            print("invaild student id : ")
+        for stu in self.students:
+            if stu["id"] == id:
+                stu["name"] = input("Enter new name: ")
+
+                while True:
+                    age = int(input("Enter age: "))
+                    if 6 <= age <= 18:
+                        stu["age"] = age
+                        break
+                    print("Invalid age.")
+
+                while True:
+                    c = int(input("Enter class: "))
+                    if 1 <= c <= 10:
+                        stu["class"] = c
+                        break
+                    print("Invalid class.")
+
+                self.save_data()
             print("Student Updated Successfully!")
-        else:
-            print("Invalid student number.")
+        return
+        
+        
     def delete_student(self):
         self.view_student()
-        if len(self.students)==0:
-            print("no student data...")
+
+        if len(self.students) == 0:
             return
-        while True:
-            i=(int(input("enter the student number :")))-1
-            if 0<=i<len(self.students):
-                self.students.pop(i)
-                print("student delete successfully!...")
+
+        try:
+            id = int(input("Enter student ID: "))
+        except ValueError:
+            print("Invalid ID")
+            return
+
+        for stu in self.students:
+            if stu["id"] == id:
+                self.students.remove(stu)
                 self.save_data()
-                break
-            else:
-                print("invalid input plaecs try again...")
+                print("Student deleted successfully!")
+                return
+
+        print("Student not found.")
     def search_student(self):
             name = input("Enter student name: ")
             found = False
@@ -136,8 +150,23 @@ class studentManagement:
        print("Total student is : ",len(self.students))
     def save_data(self):
         with open("students.json","w")as file:
-            json.dump(self.students,file)
-
+            json.dump(self.students,file,indent=4)
+    def search_student_id(self):
+                try:
+                    id =int(input("Enter student id: "))
+                except ValueError:
+                    print("invaild  student id")
+                found = False
+                for stu in self.students:
+                    if stu["id"] == id:
+                        print("-" * 45)
+                        print(f"{'ID':<8}{'Name':<15}{'Age':<8}{'Class'}")
+                        print("-" * 45)
+                        print(f"{stu['id']:<8}{stu['name']:<15}{stu['age']:<8}{stu['class']}")
+                        found = True
+                        break
+                if not found:
+                    print("Student not found.")
 
 s=studentManagement()
 s.menu()
