@@ -131,23 +131,19 @@ class studentManagement:
         
     def delete_student(self):
         self.view_student()
-
         if len(self.students) == 0:
             return
-
         try:
             student_id = int(input("Enter student ID: "))
         except ValueError:
             print("Invalid ID")
             return
-
         for stu in self.students:
             if stu["id"] == student_id:
                 self.students.remove(stu)
                 self.save_data()
                 print("Student deleted successfully!")
                 return
-
         print("Student not found.")
     def search_student(self):
             name = input("Enter student name: ")
